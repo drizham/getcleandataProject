@@ -24,46 +24,46 @@ unzip("data", files = NULL, list = FALSE, overwrite = TRUE,
 ### Data Processing Steps 
 Read all data files into data frames
 
-  -read "activity_labels.txt"
+  1.read "activity_labels.txt"
 
-  -read features.txt
+  2.read features.txt
   
-  -read files from test folder:
+  3.read files from test folder:
   
-  -read subject_test.txt
+  4.read subject_test.txt
   
-  -read X_test.txt
+  5.read X_test.txt
   
-  -read y_test.txt
+  6.read y_test.txt
   
-  -read files from train folder
+  7.read files from train folder
   
-  -load X_train.txt
+  8.load X_train.txt
   
-  -read subject_train.txt
+  9.read subject_train.txt
   
-  -read y_train.txt
+  10.read y_train.txt
   
-  -combine test data
+  11.combine test data
   
-  -store all test data in a single df
+  12.store all test data in a single df
   
-  -add activity descriptions
+  13.add activity descriptions
   
-  -label all test data
+  14.label all test data
   
-  -combine training data
+  15.combine training data
   
-  -store all training data in a single df
+  16.store all training data in a single df
   
-  -add activity descriptions
+  17.add activity descriptions
   
-  -label all training data
+  18.label all training data
   
-  -row bind the test data and train data in 'master data frame' mdf
+  19.row bind the test data and train data in 'master data frame' mdf
   
-  -Only extract data columns with the string 'mean', 'Mean' and 'std' in the names
+  20.Only extract data columns with the string 'mean', 'Mean' and 'std' in the names
   
-  -Calculate the means from the sub-set
+  21.Calculate the means from the sub-set
   
-  -Write summary to data file
+  22.Write summary to data file

@@ -1,21 +1,21 @@
 # Getting and Cleaning Data Project
-# make sure you launch script from your working directory
 
 # NOTES:
+# 	make sure you launch script from your working directory
 #	df = data frame
 #	all reads with read.table returns a df
 #   inspired by: https://github.com/FatSwede
 
-# data file link
-#fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+# Link to the data file
+# fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 
-# download to working directory
+# Download the data to working directory
 #download.file(fileUrl, destfile = "data", method = "curl")
 
-# record date
+# Obtain data time stamp
 #dateDownloaded <- date()
 
-# unzip downloaded data
+# Unzip downloaded data
 #unzip("data", files = NULL, list = FALSE, overwrite = TRUE,
 #       junkpaths = FALSE, exdir = ".", unzip = "internal",
 #       setTimes = FALSE)
@@ -113,7 +113,7 @@ mdf1 <- subset(mdf0, select=names4)
 
 # calc means from mdf1
 summary0 <- aggregate(mdf1[, ! names(mdf1) %in% c("subject_ID", "activity_ID", "activity_description", "source")],
-	   list(Subject = mdf1$subject_ID, activity = mdf1$activity_description), FUN = mean)
+	   				list(Subject = mdf1$subject_ID, activity = mdf1$activity_description), FUN = mean)
 
 # write summary0 to data file
 write.table(summary0, file="mean_std_accn_data.csv", sep=",", col.names=TRUE)
