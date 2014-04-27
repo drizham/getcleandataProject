@@ -1,4 +1,4 @@
-## How "run_analysis.R" script works
+### How "run_analysis.R" script works
 run_analysis.R is a submission for Coursera's 'Getting and Cleaning Data' Project
 
 NOTES:
@@ -21,28 +21,49 @@ unzip("data", files = NULL, list = FALSE, overwrite = TRUE,
        junkpaths = FALSE, exdir = ".", unzip = "internal",
        setTimes = FALSE)
 
-## Data Processing Steps 
+### Data Processing Steps 
 Read all data files into data frames
 
   -read "activity_labels.txt"
+
   -read features.txt
+  
   -read files from test folder:
+  
   -read subject_test.txt
+  
   -read X_test.txt
+  
   -read y_test.txt
+  
   -read files from train folder
+  
   -load X_train.txt
+  
   -read subject_train.txt
+  
   -read y_train.txt
+  
   -combine test data
+  
   -store all test data in a single df
+  
   -add activity descriptions
+  
   -label all test data
+  
   -combine training data
+  
   -store all training data in a single df
+  
   -add activity descriptions
+  
   -label all training data
+  
   -row bind the test data and train data in 'master data frame' mdf
+  
   -Only extract data columns with the string 'mean', 'Mean' and 'std' in the names
+  
   -Calculate the means from the sub-set
+  
   -Write summary to data file
